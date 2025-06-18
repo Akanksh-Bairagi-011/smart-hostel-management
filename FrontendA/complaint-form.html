@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Complaint Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="complaint.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Complaint Form</h2>
+    <form id="complaintForm">
+      <div class="mb-3">
+        <label for="complaintType" class="form-label">Complaint Type</label>
+        <select class="form-select" id="complaintType" required>
+          <option value="">Select Type</option>
+          <option value="maintenance">Maintenance</option>
+          <option value="cleaning">Cleaning</option>
+          <option value="noise">Noise</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="complaintDesc" class="form-label">Description</label>
+        <textarea class="form-control" id="complaintDesc" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-danger">Submit Complaint</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="validations.js"></script>
+</body>
+</html>
