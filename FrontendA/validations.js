@@ -1,17 +1,4 @@
 $(document).ready(function () {
-
-    // ✅ Room Preference Form Validation
-    $('#roomPreferenceForm').submit(function (e) {
-      const type = $('#roomType').val();
-      const beds = $('#bedCount').val();
-      const floor = $('#preferredFloor').val();
-  
-      if (!type || !beds || !floor) {
-        alert('Please fill all room preference fields.');
-        e.preventDefault();
-      }
-    });
-  
     // ✅ Visitor Form Validation
    
     // ✅ Real-time input restriction and validation for phone number
