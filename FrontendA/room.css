@@ -1,0 +1,38 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 equal-height rows */
+    gap: 1rem; /* Adds space between the grid items */
+    margin-top: 20px;
+}
+
+.card {
+    border: 1px solid #ddd; /* Light border for the cards */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensures content fits inside the card */
+}
+
+.card img {
+    width: 100%;
+    height: auto; /* Ensure the images scale appropriately */
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1rem;
+}
