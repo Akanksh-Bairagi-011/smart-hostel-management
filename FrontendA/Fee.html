@@ -12,45 +12,83 @@
     .student-info h5 {
       margin: 0.5rem 0;
     }
+    .table-responsive {
+      overflow-x: auto;
+    }
   </style>
 </head>
 <body>
+
+
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Smart Hostel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="Room.html">Rooms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="Fee.html">Fee</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="visitor-form.html">Visitor Form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="complaint-form.html">Complaint Form</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
   <div class="container my-5">
     <h2 class="text-center mb-4">Fee Overview</h2>
 
     <!-- Student Info -->
-    <div class="mb-4 student-info">
+    <div class="mb-4 student-info text-center text-md-start">
       <h5><strong>Name:</strong> John Ali</h5>
       <h5><strong>Username:</strong> Ali023</h5>
       <h5><strong>ID:</strong> 023</h5>
     </div>
 
     <!-- Fee Table -->
-    <table class="table table-bordered text-center align-middle">
-      <thead class="table-dark">
-        <tr>
-          <th scope="col">No.</th>
-          <th scope="col">Hostel Fee</th>
-          <th scope="col">Food Fee</th>
-          <th scope="col">Add-Ons</th>
-          <th scope="col">Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>₹4,000</td>
-          <td>₹6,000</td>
-          <td>₹2,000</td>
-          <td><strong>₹12,000</strong></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Hostel Fee</th>
+            <th scope="col">Food Fee</th>
+            <th scope="col">Add-Ons</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>₹4,000</td>
+            <td>₹6,000</td>
+            <td>₹2,000</td>
+            <td><strong>₹12,000</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <!-- Action -->
     <div class="text-center mt-4">
-      <a class="btn btn-success btn-lg" href="#" role="button">Pay Now</a>
-    </div>
+  <div class="d-grid d-md-flex justify-content-md-center">
+    <a class="btn btn-success btn-lg px-5" href="#" role="button">Pay Now</a>
   </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>

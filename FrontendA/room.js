@@ -1,8 +1,20 @@
+document.addEventListener("DOMContentLoaded",function(){
+
+
+
 const AC=document.getElementById("filter-ac");
 const beds=document.getElementById("filter-beds");
 const floor=document.getElementById("filter-floor");
 
 const clear=document.getElementById("clear-filters");
+clear.addEventListener("click",()=>{
+    console.log("Clicked on Clear");
+    AC.value="";
+    beds.value="";
+    floor.value="";
+    Filter();
+});
+
 
 const roomCards=document.querySelectorAll(".room-card");
 
@@ -38,3 +50,18 @@ function Filter(){
     });
 }
 
+const buttons=document.querySelectorAll(".btn");
+
+buttons.forEach((button)=>{
+    button.addEventListener("click",()=>{
+        const roomCard=button.closest(".room-card"); //element.closest('.parent-class')
+        console.log("AC?NON_AC: ",roomCard.dataset.ac);
+        console.log(`Beds : ${roomCard.dataset.beds}`);
+        console.log(`Floor No. : ${roomCard.dataset.floor}`);
+        
+        const roomNo=roomCard.querySelector(".card-title");// Find child within element	--> element.querySelector('.child-class')
+        console.log(roomNo.innerText);
+    })
+})
+
+});
