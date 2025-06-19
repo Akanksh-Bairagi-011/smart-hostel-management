@@ -28,8 +28,6 @@ body {
   }
   
   input[type="text"],
-  input[type="email"],
-  input[type="date"],
   select,
   textarea {
     width: 100%;
