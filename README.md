@@ -5,7 +5,7 @@ Smart hostel management system is designed to streamline and automate hostel ope
 
 - HTML5  
 - CSS3  
-- JavaScript (Vanilla)
+- JavaScript 
 
 ##  How to Run
 
