@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBUtil {
     private static final String URL = "jdbc:oracle:thin:@localhost:1521:XE";
     private static final String USER = "system";
-    private static final String PASS = "system";
+private static final String PASS = "system";
 
     public static Connection getConnection() throws SQLException {
         try {
