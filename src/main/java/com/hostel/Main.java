@@ -3,18 +3,37 @@ package com.hostel;
 import com.hostel.dao.RoomBookingDAO;
 import com.hostel.dao.ComplaintDAO;
 import com.hostel.dao.FeeDAO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Date;
 
 public class Main {
-    public static void main(String[] args) {
-        RoomBookingDAO bookingDAO = new RoomBookingDAO();
-        ComplaintDAO complaintDAO = new ComplaintDAO();
-        FeeDAO feeDAO = new FeeDAO();
 
-        // Example test data
-        bookingDAO.allocateRoom(1, 101, Date.valueOf("2025-06-26"), Date.valueOf("2025-12-31"));
-        complaintDAO.submitComplaint(1, "Water Issue", "No water in bathroom", "Open", Date.valueOf("2025-06-26"));
-        feeDAO.getFeeRecord(1);
+    private static final Logger logger = LoggerFactory.getLogger(Main.class);
+
+    public static void main(String[] args) {
+
+        //logger.info("Print");
+
+        // Test booking a room
+        RoomBookingDAO roomDao = new RoomBookingDAO();
+        boolean roomBooked = roomDao.bookRoom(101, 1);
+        System.out.println("Room booking success: " + roomBooked);
+
+        // Test submitting a complaint
+        ComplaintDAO complaintDao = new ComplaintDAO();
+        System.out.println("Complaint Start: " );
+        boolean complaintSubmitted = complaintDao.fileComplaint(
+                101,
+                "Plumbing",
+                "The bathroom tap is leaking constantly."
+        );
+        System.out.println("Complaint submission success: " + complaintSubmitted);
+//
+////        // Test fee record query
+        FeeDAO feeDao = new FeeDAO();
+        System.out.println("Fee record for student ID 101:");
+        feeDao.getFeeStatus(101);
     }
 }

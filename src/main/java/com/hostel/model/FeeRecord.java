@@ -17,20 +17,45 @@ public class FeeRecord {
         this.isPaid = isPaid;
     }
 
-    public int getFeeId() { return feeId; }
-    public void setFeeId(int feeId) { this.feeId = feeId; }
+    public int getFeeId() {
+        return feeId;
+    }
 
-    public int getStudentId() { return studentId; }
-    public void setStudentId(int studentId) { this.studentId = studentId; }
+    public void setFeeId(int feeId) {
+        this.feeId = feeId;
+    }
 
-    public double getAmount() { return amount; }
-    public void setAmount(double amount) { this.amount = amount; }
+    public int getStudentId() {
+        return studentId;
+    }
 
-    public LocalDate getDueDate() { return dueDate; }
-    public void setDueDate(LocalDate dueDate) { this.dueDate = dueDate; }
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
 
-    public boolean isPaid() { return isPaid; }
-    public void setPaid(boolean paid) { isPaid = paid; }
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public boolean isPaid() {
+        return isPaid;
+    }
+
+    public void setPaid(boolean paid) {
+        isPaid = paid;
+    }
 
     @Override
     public String toString() {
