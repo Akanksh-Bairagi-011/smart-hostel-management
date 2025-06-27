@@ -10,6 +10,7 @@ SCRIPT_PATH=$(realpath "$0")
 
 mkdir -p "$ARCHIVE_DIR"
 
+# for logs directory
 for LOG_FILE in "$LOG_DIR"/*.log; do
     [ -e "$LOG_FILE" ] || continue
     BASENAME=$(basename "$LOG_FILE")
@@ -17,6 +18,17 @@ for LOG_FILE in "$LOG_DIR"/*.log; do
     mv "$LOG_FILE" "$ARCHIVE_FILE"
     gzip "$ARCHIVE_FILE"
     echo "[INFO] $(date) - Rotated and compressed $BASENAME"
+done
+
+# for project root 
+for ROOT_LOG_FILE in ./*.log; do
+  [ -e "$ROOT_LOG_FILE" ] || continue
+  BASENAME=$(basename "$ROOT_LOG_FILE")
+  ARCHIVE_FILE="$ARCHIVE_DIR/${BASENAME%.log}-$DATE_SUFFIX.log"
+  
+  mv "$ROOT_LOG_FILE" "$ARCHIVE_FILE"
+  gzip "$ARCHIVE_FILE"
+  echo "[INFO] $(date) - Rotated and compressed $BASENAME from root directory"
 done
 
 # if cron don't work.... please install cron on your system first then try again
