@@ -8,34 +8,55 @@ public class Student {
     private String gender;
     private String email;
     private String phoneNumber;
-    private LocalDate admissionDate;
 
-    public Student(int studentId, String fullName, String gender, String email, String phoneNumber, LocalDate admissionDate) {
+    public Student(int studentId, String fullName, String gender, String email, String phoneNumber) {
         this.studentId = studentId;
         this.fullName = fullName;
         this.gender = gender;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.admissionDate = admissionDate;
+
     }
 
-    public int getStudentId() { return studentId; }
-    public void setStudentId(int studentId) { this.studentId = studentId; }
+    public int getStudentId() {
+        return studentId;
+    }
 
-    public String getFullName() { return fullName; }
-    public void setFullName(String fullName) { this.fullName = fullName; }
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
 
-    public String getGender() { return gender; }
-    public void setGender(String gender) { this.gender = gender; }
+    public String getFullName() {
+        return fullName;
+    }
 
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 
-    public String getPhoneNumber() { return phoneNumber; }
-    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
+    public String getGender() {
+        return gender;
+    }
 
-    public LocalDate getAdmissionDate() { return admissionDate; }
-    public void setAdmissionDate(LocalDate admissionDate) { this.admissionDate = admissionDate; }
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
     @Override
     public String toString() {
@@ -45,7 +66,7 @@ public class Student {
                 ", gender='" + gender + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", admissionDate=" + admissionDate +
+
                 '}';
     }
 }

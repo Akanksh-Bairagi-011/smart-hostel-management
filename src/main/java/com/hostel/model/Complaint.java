@@ -19,23 +19,53 @@ public class Complaint {
         this.dateFiled = dateFiled;
     }
 
-    public int getComplaintId() { return complaintId; }
-    public void setComplaintId(int complaintId) { this.complaintId = complaintId; }
+    public int getComplaintId() {
+        return complaintId;
+    }
 
-    public int getStudentId() { return studentId; }
-    public void setStudentId(int studentId) { this.studentId = studentId; }
+    public void setComplaintId(int complaintId) {
+        this.complaintId = complaintId;
+    }
 
-    public String getComplaintType() { return complaintType; }
-    public void setComplaintType(String complaintType) { this.complaintType = complaintType; }
+    public int getStudentId() {
+        return studentId;
+    }
 
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
 
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
+    public String getComplaintType() {
+        return complaintType;
+    }
 
-    public LocalDate getDateFiled() { return dateFiled; }
-    public void setDateFiled(LocalDate dateFiled) { this.dateFiled = dateFiled; }
+    public void setComplaintType(String complaintType) {
+        this.complaintType = complaintType;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public LocalDate getDateFiled() {
+        return dateFiled;
+    }
+
+    public void setDateFiled(LocalDate dateFiled) {
+        this.dateFiled = dateFiled;
+    }
 
     @Override
     public String toString() {
