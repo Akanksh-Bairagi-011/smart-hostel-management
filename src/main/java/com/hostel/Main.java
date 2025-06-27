@@ -18,7 +18,7 @@ public class Main {
 
         // Test booking a room
         RoomBookingDAO roomDao = new RoomBookingDAO();
-        boolean roomBooked = roomDao.bookRoom(101, 1);
+        boolean roomBooked = roomDao.CheckIn(101, 1);
         System.out.println("Room booking success: " + roomBooked);
 
         // Test submitting a complaint
