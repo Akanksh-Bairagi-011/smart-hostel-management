@@ -1,3 +1,6 @@
+# This script is designed for Linux or Unix-based systems.
+# It rotates and compresses all .log files inside ./logs/ every week.
+# Make sure gzip and cron are installed and that you have permission to add cron jobs.
 #!/bin/bash
 
 LOG_DIR="./logs"
@@ -16,7 +19,7 @@ for LOG_FILE in "$LOG_DIR"/*.log; do
     echo "[INFO] $(date) - Rotated and compressed $BASENAME"
 done
 
-# if cron don't work.... please install cron on your system  first then try again
+# if cron don't work.... please install cron on your system first then try again
 
 CRON_CMD="0 2 * * 0 $SCRIPT_PATH >> ${SCRIPT_PATH%.sh}.log 2>&1"
 CRON_EXISTS=$(crontab -l 2>/dev/null | grep -F "$SCRIPT_PATH")
